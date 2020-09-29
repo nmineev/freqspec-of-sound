@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <h3>Frequency spectrum graph of the "{{file_name}}"</h3>
+    <div class="pull-left">
+        <nav aria-label="...">
+            <ul class="pager">
+                <li><a href="{{ url_for('freqspec_builder.freqspec_builder') }}">Back</a></li>
+            </ul>
+        </nav>
+    </div>
+    <img src="{{graph_path}}" class="img-fluid" alt="Frequency spectrum graph" width="1000" height="500">
+{% endblock %}

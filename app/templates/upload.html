@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <h3>Upload your audio to get its frequency spectrum graph</h3>
+    <form method=post enctype=multipart/form-data>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">File must be less than 4MB(Heroku restriction)</label>
+            <input type=file name=file class="form-control-file" id="exampleFormControlFile1">
+            <input type=submit value=Upload>
+        </div>
+    </form>
+{% endblock %}
